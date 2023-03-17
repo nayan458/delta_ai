@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import cb from '../media/img/registration.png'
 import LogoBlack from '../media/Logo'
 
 export default function Registration() {
 
+    const navigate = useNavigate()
     const [x, setx] = useState(null)
     const setm =()=> {setx(true)}
     const setf =()=> setx(false)
@@ -44,9 +45,7 @@ export default function Registration() {
       || !usrDetails.phone 
       || !usrDetails.email 
       || !usrDetails.password 
-      || !usrDetails.institute 
-      || !usrDetails.team
-      || !usrDetails.gender
+      || !usrDetails.institute
       ){
       window.alert('You need to fill values in all the fields')
       close()
@@ -58,6 +57,7 @@ export default function Registration() {
     // console.log(usrDetails.gender)
     closeErr()
     open()
+    navigate('/')
   }
   
   const sub=(e)=>{
@@ -115,7 +115,6 @@ export default function Registration() {
                 <input type="email" placeholder='Email' className='text-base md:text-xl font-light font-sans px-3 py-2 rounded-md outline-none border-slate-400 ' name='email' value={usrDetails.email } onChange={handelChange} />
                 <input type="password" placeholder='Password' className='text-base md:text-xl font-light font-sans px-3 py-2 rounded-md outline-none border-slate-400  w-full' name='password' value={usrDetails.password } onChange={handelChange} />
                 <input type="text" placeholder='Institute' className='text-base md:text-xl font-light font-sans px-3 py-2 rounded-md outline-none border-slate-400 ' name='institute' value={usrDetails.institute } onChange={handelChange} />
-                <input type="text" placeholder='Team' className='text-base md:text-xl font-light font-sans px-3 py-2 rounded-md outline-none border-slate-400 ' name='team' value={usrDetails.team } onChange={handelChange} />
                 
 
 

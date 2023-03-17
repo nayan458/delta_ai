@@ -24,6 +24,7 @@ export default function useAi() {
     };
 
     const API_KEY = "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";
+    // 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
 
     const handleClick = async () => {
         try {
