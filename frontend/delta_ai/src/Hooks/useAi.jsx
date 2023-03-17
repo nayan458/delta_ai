@@ -22,7 +22,7 @@ export default function useAi() {
       }
     };
 
-    const API_KEY = "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";
+    const API_KEY = "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";
 
     const handleClick = async () => {
         try {

@@ -15,6 +15,7 @@ export default function Learnings() {
                 <div className='grid w-full h-full gap-4 pb-3'>
                   <div className='text-xl font-bold text-slate-700 mt-3'>Frontend</div>
 
+
                     <div className='flex gap-3'>
                     {
                           Subject.map(({subject,desc},i)=>{
