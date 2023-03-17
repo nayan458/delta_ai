@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import NodeContext from '../contexts/NodeContext'
 import cb from '../media/img/registration.png'
 import LogoBlack from '../media/Logo'
 
@@ -10,6 +11,7 @@ export default function Registration() {
     const setm =()=> {setx(true)}
     const setf =()=> setx(false)
 
+  const a = useContext(NodeContext)
 
   const [usrDetails, setusrDetails] = useState({
     fname:'',phone:'',email:'',password:'',institute:'',team:'',gender:''
@@ -18,14 +20,10 @@ export default function Registration() {
   const handelChange=(e)=>{
     name = e.target.name;
     value = e.target.value;
-    // console.log(name)
-    // console.log(value)
     if(name === 'gender'){
       if(value === 'male'){setm()}
       if(value === 'female'){setf()}
     }
-    // alert(`${typeof name}\n${value}`)
-    // console.log(e)
 
     setusrDetails({...usrDetails,[name] : value})
   }
@@ -52,6 +50,7 @@ export default function Registration() {
       openErr()
       return
     }
+    a.setAuth(true)
 
     window.alert(`Successfully registered with usr details \n ${usrDetails.fname}\n ${usrDetails.phone}\n  ${usrDetails.email}\n ${usrDetails.password}\n ${usrDetails.institute}\n ${usrDetails.team}\n ${usrDetails.gender}`);
     // console.log(usrDetails.gender)

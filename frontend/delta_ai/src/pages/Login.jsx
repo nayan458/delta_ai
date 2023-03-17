@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import NodeContext from '../contexts/NodeContext';
 import cb from '../media/img/codeeBoy.png'
 import LogoBlack from '../media/Logo';
 
@@ -10,6 +11,9 @@ export default function Login() {
     password:''
   })
 
+  const navigate = useNavigate()
+
+  const a = useContext(NodeContext)
   let name, value;
 
   let handelChange=(e)=>{
@@ -19,6 +23,9 @@ export default function Login() {
   }
 
   const sub=(e)=>{
+    alert("Logged in successfully")
+    a.setAuth(true)
+    navigate('/')
     e.preventDefault()
   }
 
@@ -60,11 +67,11 @@ export default function Login() {
                  Forgot Password
                 </a>
                  </div>
+                <Link to='/' >
                 <button type="submit" className='text-base bg-[#7400e8] rounded-md md:text-xl font-SansPro font-bold px-2 py-3 shadow-lg text-slate-100 outline-none border-none'>
-                <Link to='/'>
-                    Submit
-                </Link>
+                    login
                 </button>
+                </Link>
             </form>
 
 

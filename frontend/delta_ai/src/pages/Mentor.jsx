@@ -8,7 +8,7 @@ export default function Mentor() {
   return (
     <>
         <Nav/>
-        <div className='flex w-screen m-auto gap-2 fixed bottom-0 align-middle items-center justify-center '>
+        <div className='flex w-screen m-auto gap-2 fixed bottom-2 align-middle items-center justify-center '>
                 <div>
                     <input className='border-2 border-purple-500 p-4 w-[400px] m-auto rounded-md' placeholder='start your chat here. . .' type='text'></input>
                 </div>
