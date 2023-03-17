@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MainPage from '../components/MainPage'
 import Nav from '../components/Nav'
 import useAi from '../Hooks/useAi'
@@ -6,31 +6,28 @@ import delta from '../media/delta.png'
 import ReactMarkdown from 'react-markdown'
 import SwipeableTemporaryDrawer from '../components/MuiComponents/SwipeableTemporaryDrawer'
 import FloatButton from '../components/FloatButton'
+import { Link } from '@mui/material'
+import Spinnn from '../components/Spinnn'
 
 
 export default function Home() {
 
-    const {text, response,  codeBlock, error, handleClick, handleChange} = useAi()
-    const style = {
-        backgroundColor : '#7400e8',
-        color : '#ffffff',
-        borderRadius : "50%",
-        width : "50px",
-        height : "50px",
-        ":hover" : {
-            bgcolor : '#5900b3',
-            color : "#f2f2f2"
-        }
-    }
-
+    const {text, response, spin,codeBlock, error, handleClick, handleChange} = useAi()  
 
     const inputBox = document.querySelector('.input-box');
     // const codeblock = <ReactMarkdown>{codeBlock}</ReactMarkdown>
     
 
   return (<>
+  {
+    spin ? <Spinnn/>
+    : <></>
+  }
+    
     <Nav/>
-    <FloatButton/>
+    <Link to='/mentor'>
+        <FloatButton/>
+    </Link>
     <MainPage
         comp={<>
             <div className='w-full h-full flex flex-col items-center pt-24 gap-12'>

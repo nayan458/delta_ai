@@ -17,6 +17,7 @@ export default function Nav() {
                     <Link to='/' className='font-bold cursor-pointer outline-none'>home</Link>
                     <Link to='/learning' className='hover:font-bold cursor-pointer outline-none'>learnings</Link>
                     <Link to='/explore' className='hover:font-bold cursor-pointer outline-none'>explore</Link>
+                    <Link to='/discussion' className='hover:font-bold cursor-pointer outline-none'>discussion forums</Link>
                 </ul>
             </div>
             <Link to='/login' className='bg-[#7400e8] text-slate-300 px-6 py-2 rounded-3xl '>login</Link>

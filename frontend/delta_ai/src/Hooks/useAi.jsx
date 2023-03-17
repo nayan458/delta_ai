@@ -6,6 +6,7 @@ export default function useAi() {
     const [response, setResponse] = useState('');
     const [codeBlock, setCodeBlock] = useState('');
     const [error, setError] = useState(false)
+    const [spin, setSpin] = useState(false)
 
     const handleChange = (event) => {
       try {
@@ -22,7 +23,7 @@ export default function useAi() {
       }
     };
 
-    const API_KEY = "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";
+    const API_KEY = "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";
 
     const handleClick = async () => {
         try {
@@ -48,7 +49,7 @@ export default function useAi() {
         model : 'text-davinci-003',
         n: 1,
         };
-
+        setSpin(true)
         try {
         
         const res = await axios.post(url, data, { headers });
@@ -76,6 +77,7 @@ export default function useAi() {
           } catch (err) {
           console.error(err);
           }
+        setSpin(false)
 
     };
 
@@ -84,6 +86,7 @@ export default function useAi() {
     response,
     codeBlock,
     error,
+    spin,
     handleClick,
     handleChange
   }

@@ -11,7 +11,7 @@ export default function Error() {
                 </div>
                 <div>Error 404 Page Not Found</div>
                 <br/>
-                <Link to='/' className='bg-blue-500 px-3 py-2 rounded-sm cursor-pointer text-slate-200 font-semibold'>Back to home</Link>
+                <Link to='/' className='bg-[#7400e8] px-3 py-2 rounded-sm cursor-pointer text-slate-200 font-semibold'>Back to home</Link>
         </div>
     </>
   )
