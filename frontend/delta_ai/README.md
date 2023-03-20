@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Delta.ai Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation
 
-## Available Scripts
+### `npm install or npm i`
 
-In the project directory, you can run:
+this command would install all the dependencies
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+this command would run the frontend application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Folder Structure
 
-### `npm test`
+### src
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+this is the directory that contains multiple sub folders explained below. However, it contain following 2 most importent files
+App.js
+index.js
 
-### `npm run build`
+#### App.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+this is the file responsible for handeling routes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### index.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+this is the file responsible for rendering the App component.
 
-### `npm run eject`
+### api
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+this directory contains one file at present that is concern with creating axios instances with default values for different APIs
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+this directory consists of reusable components. the components build by us are present inside this directory along with a folder named MuiComponents that consists of components imported from material ui
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### contexts
 
-## Learn More
+This folder consists of 2 files
+NodeContext.jsx 
+NodeState.jsx
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The context Api helps to prevent props drealing.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+this creates a global context to help the application define and store data and functions globaly.
 
-### Code Splitting
+### db
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This is the folder that basically store files with dummy data that replicates the form of data recived when requested to the server
 
-### Analyzing the Bundle Size
+### Hooks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This is the directory that provides custom hooks for diffrent purpose.
 
-### Making a Progressive Web App
+### media
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+this folder stores images and categorize them on the basis of their type or file extension
 
-### Advanced Configuration
+### pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+this folder consist of all the pages of the application
