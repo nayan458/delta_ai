@@ -15,8 +15,8 @@ this command would run the frontend application
 ### src
 
 this is the directory that contains multiple sub folders explained below. However, it contain following 2 most importent files
-App.js
-index.js
+- App.js
+- index.js
 
 #### App.js
 
@@ -37,8 +37,8 @@ this directory consists of reusable components. the components build by us are p
 ### contexts
 
 This folder consists of 2 files
-NodeContext.jsx 
-NodeState.jsx
+- NodeContext.jsx 
+- NodeState.jsx
 
 The context Api helps to prevent props drealing.
 

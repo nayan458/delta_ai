@@ -6,15 +6,15 @@ The targeted user through this app are - students, teachers, corporate sector em
 
 ## Moto
 
-Make users learn coding concepts in easiest posible way.
-Makeing learnig fun by creating a commpitive environment and discussion forums.
+- Make users learn coding concepts in easiest posible way.
+- Makeing learnig fun by creating a commpitive environment and discussion forums.
 
 ## Fututre Scopes
 
 This project holds a high future value and potential to grow tremendously few of them are discussed below:
-Add hands-on-lab challenges along with providing a personolized custom rodemap
-Providing a ide for a quick start and guid through
-ClassRooms that anyone can create to hold small programming challenges on any tech stacks.
+- Add hands-on-lab challenges along with providing a personolized custom rodemap
+- Providing a ide for a quick start and guid through
+- ClassRooms that anyone can create to hold small programming challenges on any tech stacks.
 
 # Technical Aspects
 
@@ -31,16 +31,16 @@ The folder structure is well maintained for better understanding.
 
 ### Backend
 
-The Backend is build using Laravel. Although it is not yet complete but the tables are migrated and the relationships among the tables are well established. 
-In future we would have to implement firebase for realtime chat functionality.
-Redis for cashing pusrpose.
-Mongodb for discussion forums and deploy them over different geographical areas to expand the network world wid.
+- The Backend is build using Laravel. Although it is not yet complete but the tables are migrated and the relationships among the tables are well established. 
+- In future we would have to implement firebase for realtime chat functionality.
+- Redis for cashing pusrpose.
+- Mongodb for discussion forums and deploy them over different geographical areas to expand the network world wid.
 
 ### Best practices
 
-This applicatioin uses CSRF tokens to send request to the server that prtects the site from XSS attacks
-DRY(Do Not Repeat Yourself) concept is implemented as much as posible by brecking down the project into smaller components.
-Folder structure is maintained in such a way that it is easy to identify for other other developers and develop upon it.
-API tests are performed using POSTMAN
-Error Boundaries are well maintained
-Frontend validations are implemented
+- This applicatioin uses CSRF tokens to send request to the server that prtects the site from XSS attacks
+- DRY(Do Not Repeat Yourself) concept is implemented as much as posible by brecking down the project into smaller components.
+- Folder structure is maintained in such a way that it is easy to identify for other other developers and develop upon it.
+- API tests are performed using POSTMAN
+- Error Boundaries are well maintained
+- Frontend validations are implemented
