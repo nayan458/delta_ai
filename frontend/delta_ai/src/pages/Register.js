@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import NodeContext from '../contexts/NodeContext'
 import cb from '../media/img/registration.png'
-import LogoBlack from '../media/Logo'
+import Logo from '../media/Logo'
 
 export default function Registration() {
 
@@ -14,7 +14,7 @@ export default function Registration() {
   const a = useContext(NodeContext)
 
   const [usrDetails, setusrDetails] = useState({
-    fname:'',phone:'',email:'',password:'',institute:'',team:'',gender:''
+    fname:'',phone:'',email:'',password:'',institute:'',
   })
   let name, value;
   const handelChange=(e)=>{
@@ -52,8 +52,7 @@ export default function Registration() {
     }
     a.setAuth(true)
 
-    window.alert(`Successfully registered with usr details \n ${usrDetails.fname}\n ${usrDetails.phone}\n  ${usrDetails.email}\n ${usrDetails.password}\n ${usrDetails.institute}\n ${usrDetails.team}\n ${usrDetails.gender}`);
-    // console.log(usrDetails.gender)
+    window.alert(`Successfully registered with usr details \n ${usrDetails.fname}\n ${usrDetails.phone}\n  ${usrDetails.email}\n ${usrDetails.institute}`);
     closeErr()
     open()
     navigate('/')
@@ -65,10 +64,9 @@ export default function Registration() {
 
   return (
     <>
-    {/* <div className='relative pt-2 pb-3 top-0 px-16 md:py-2 md:absolute bg-slate-100'> */}
     <div className='top-0 pl-5 pt-2 pr-4 sm:px-10 md:px-[3rem] lg:px-24 left-0 bg-slate-100 md:absolute'>
       <Link to='/'>
-        <LogoBlack/>
+        <Logo/>
       </Link>
     </div>
         
@@ -87,10 +85,10 @@ export default function Registration() {
           <div className='grid gap-8 md:gap-14 '>
 
             <p className='grid'>
-            <span className='text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] lg:text-[2.5rem] text-charcol font-SansPro font-bold'>
+            <span className='text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] lg:text-[2.5rem] text-charcol font-bold'>
             Register Here
             </span>
-            <span className='text-[.8rem] sm:text-[.8rem] md:text-[.8rem] lg:text-[1rem] text-charcol/60 font-SansPro font-bold  '>
+            <span className='text-[.8rem] sm:text-[.8rem] md:text-[.8rem] lg:text-[1rem] text-charcol/60 font-bold  '>
               Fill in your details below.
             </span>
             </p>
@@ -124,7 +122,7 @@ export default function Registration() {
                 
                 
                  </div>
-                <button type="submit" className='text-base bg-[#7400e8] rounded-md md:text-xl font-SansPro font-bold px-2 py-3 shadow-lg text-slate-100 outline-none border-none ' onClick={showDetails}>Submit</button>
+                <button type="submit" className='text-base bg-[#7400e8] rounded-md md:text-xl font-bold px-2 py-3 shadow-lg text-slate-100 outline-none border-none ' onClick={showDetails}>Submit</button>
             </form>
 
           </div>

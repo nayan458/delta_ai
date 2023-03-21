@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import NodeContext from '../contexts/NodeContext';
 import cb from '../media/img/codeeBoy.png'
-import LogoBlack from '../media/Logo';
+import Logo from '../media/Logo';
 
 export default function Login() {
 
@@ -23,10 +23,10 @@ export default function Login() {
   }
 
   const sub=(e)=>{
-    alert("Logged in successfully")
-    a.setAuth(true)
-    navigate('/')
     e.preventDefault()
+    a.setAuth(true)
+    alert("Logged in successfully")
+    navigate('/')
   }
 
   return (
@@ -35,7 +35,7 @@ export default function Login() {
     <div className='w-screen min-h-screen md:flex justify-center align-middle items-center bg-slate-100 px-6 py-1'>
     <div className='top-0 pl-5 pt-2 pr-4 sm:px-10 md:px-[3rem] lg:px-24 left-0 bg-slate-100 md:absolute'>
       <Link to='/'>
-        <LogoBlack/>
+        <Logo/>
       </Link>
     </div>
       <div className='w-full h-full grid grid-cols-8 gap-12'>
@@ -52,14 +52,15 @@ export default function Login() {
           <div className='grid gap-8 md:gap-14 '>
 
             <p className='grid'>
-            <span className='text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] lg:text-[2.5rem] text-charcol font-SansPro font-bold'>
+            <span className='text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] lg:text-[2.5rem] text-charcol font-bold'>
               Login Here
             </span>
-            <span className='text-[.8rem] sm:text-[.8rem] md:text-[.8rem] lg:text-[1rem] text-charcol/60 font-SansPro font-bold  '>
+            <span className='text-[.8rem] sm:text-[.8rem] md:text-[.8rem] lg:text-[1rem] text-charcol/60 font-bold  '>
               Fill in your details below.
             </span>
             </p>
-            <form className="grid gap-4 md:gap-7" onSubmit={sub}>
+
+            <form className="grid gap-4 md:gap-7">
                 <input type="email" placeholder='Email' className='text-base md:text-xl font-light font-sans px-3 py-2 rounded-md outline-none border-slate-400' autoComplete='false' name='email' value={formvalue.email} onChange={handelChange}/>
                 <input type="password" placeholder='Password' className='text-base md:text-xl font-light font-sans px-3 py-2 rounded-md outline-none border-slate-400' autoComplete='false' name='password' value={formvalue.password} onChange={handelChange}/>
                 <div className='text-xs md:text-sm text-center'>Don't remember password?
@@ -67,13 +68,10 @@ export default function Login() {
                  Forgot Password
                 </a>
                  </div>
-                <Link to='/' >
-                <button type="submit" className='text-base bg-[#7400e8] rounded-md md:text-xl font-SansPro font-bold px-2 py-3 shadow-lg text-slate-100 outline-none border-none'>
+                <button type="submit" className='text-base bg-[#7400e8] rounded-md md:text-xl font-bold px-2 py-3 shadow-lg text-slate-100 outline-none border-none' onClick={sub}>
                     login
                 </button>
-                </Link>
             </form>
-
 
                 <div className='text-xs md:text-sm text-center'>Don't have an account?
                 <Link to='/register' className='px-2 font-bold text-green-600 hover:underline hover:underline-offset-2 '>

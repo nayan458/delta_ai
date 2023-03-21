@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import OpenaiInstance from '../api/api';
 
 export default function useAi() {
     const [text, setText] = useState('');
@@ -23,7 +24,7 @@ export default function useAi() {
       }
     };
 
-    const API_KEY = "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";
+    // const API_KEY = "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";
 
     const handleClick = async () => {
         try {
@@ -37,22 +38,23 @@ export default function useAi() {
         } catch (error) {
           
         }
-        const url = 'https://api.openai.com/v1/completions';
-        const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${API_KEY}`
-        };
+        // const url = 'https://api.openai.com/v1/completions';
+        // const headers = {
+        // 'Content-Type': 'application/json',
+        // 'Authorization': `Bearer ${API_KEY}`
+        // };
         const data = {
-        prompt: `Take the title below and explain in detail about its concept.
-                Title: ${text}`,
-        max_tokens: 2000,
-        model : 'text-davinci-003',
-        n: 1,
+          prompt: `Take the title below and explain in detail about its concept.
+                  Title: ${text}`,
+          max_tokens: 2000,
+          model : 'text-davinci-003',
+          n: 1,
         };
         setSpin(true)
         try {
         
-        const res = await axios.post(url, data, { headers });
+        // const res = await axios.post(url, data, { headers });
+        const res = await OpenaiInstance.post('',data);
         setResponse(res.data.choices[0].text);
         // console.log(await res)
         } catch (err) {
@@ -71,7 +73,8 @@ export default function useAi() {
         }
 
         try {
-          const res = await axios.post(url, codeblock, { headers });
+          // const res = await axios.post(url, codeblock, { headers });
+          const res = await OpenaiInstance.post('', codeblock);
           setCodeBlock(res.data.choices[0].text);
           console.log(res)
           } catch (err) {

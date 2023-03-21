@@ -1,24 +1,13 @@
-import axios from 'axios'
+import axios from "axios";
 
+const API_KEY = "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";
 
+const OpenaiInstance = axios.create({
+    baseURL: 'https://api.openai.com/v1/completions',
+    headers : {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_KEY}`
+        }
+})
 
-    const openAi = axios.create({
-        baseURL: `https://api.openai.com/v1`,
-        headers: {
-            'Authorization' : 'Bearer ' + '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',
-            'Content-Type' : "application/json"
-        },
-    });
-
-    // instance.defaults.baseURL = 'http://localhost:8000/api/'
-
-    // instance.interceptors.request.use(
-    //     function(request){
-    //         let {baseURL}=request
-    //         if(baseURL !== 'http://localhost:8000/api/')
-    //             request.baseURL = 'http://localhost:8000/api/'
-    //         return request
-    //     }
-    // )
-
-  export default openAi
+export default OpenaiInstance
